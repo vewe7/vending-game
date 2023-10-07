@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://dat41afu2rf2f"]
+
+[node name="Snack" type="RigidBody2D"]

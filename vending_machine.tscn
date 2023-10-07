@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://lhfeivoxr77s"]
+[gd_scene load_steps=50 format=3 uid="uid://lhfeivoxr77s"]
 
 [ext_resource type="Script" path="res://vendMac.gd" id="1_c3hid"]
 [ext_resource type="Texture2D" uid="uid://c7aux7ilglbjc" path="res://sprites/Foreground.png" id="2_6cfla"]
@@ -23,6 +23,8 @@
 [ext_resource type="Texture2D" uid="uid://dlwehdpm8jxss" path="res://sprites/Reeses.png" id="21_q1dpi"]
 [ext_resource type="Texture2D" uid="uid://hlo1smu3jlem" path="res://sprites/Snickers.png" id="22_abtfx"]
 [ext_resource type="Texture2D" uid="uid://ba42i36jb70u4" path="res://sprites/Sour_Skittles.png" id="23_td1l7"]
+[ext_resource type="Texture2D" uid="uid://b6f83lao1ehgc" path="res://sprites/Skittles.png" id="24_dc3pm"]
+[ext_resource type="Texture2D" uid="uid://b4ug2vuwf5mng" path="res://sprites/AlmondJoy.png" id="25_usprx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pcmt2"]
 animations = [{
@@ -266,6 +268,28 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_vi0g7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_dc3pm")
+}],
+"loop": true,
+"name": &"bag",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0me1v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_usprx")
+}],
+"loop": true,
+"name": &"bar",
+"speed": 5.0
+}]
+
 [node name="VendingMachine" type="Area2D"]
 script = ExtResource("1_c3hid")
 
@@ -399,7 +423,19 @@ sprite_frames = SubResource("SpriteFrames_3w1so")
 animation = &"bar"
 
 [node name="sourSkittles" type="AnimatedSprite2D" parent="."]
-position = Vector2(50, 68)
+position = Vector2(51, 70)
 scale = Vector2(2.75, 2.5)
 sprite_frames = SubResource("SpriteFrames_qbqcx")
 animation = &"bag"
+
+[node name="skittles" type="AnimatedSprite2D" parent="."]
+position = Vector2(82, 70)
+scale = Vector2(2.75, 2.5)
+sprite_frames = SubResource("SpriteFrames_vi0g7")
+animation = &"bag"
+
+[node name="almdjoy" type="AnimatedSprite2D" parent="."]
+position = Vector2(82, -3)
+scale = Vector2(2.2, 2.609)
+sprite_frames = SubResource("SpriteFrames_0me1v")
+animation = &"bar"

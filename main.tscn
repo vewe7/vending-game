@@ -1,3 +1,15 @@
-[gd_scene format=3 uid="uid://cal84okvyfmdu"]
+[gd_scene load_steps=3 format=3 uid="uid://cal84okvyfmdu"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_m0krb"]
+[ext_resource type="PackedScene" uid="uid://dat41afu2rf2f" path="res://snack.tscn" id="2_kblac"]
 
 [node name="Main" type="Node"]
+script = ExtResource("1_m0krb")
+snack_scene = ExtResource("2_kblac")
+
+[node name="Snack" parent="." instance=ExtResource("2_kblac")]
+position = Vector2(572, 430)
+gravity_scale = 2.66454e-15
+
+[node name="Snack2" parent="." instance=ExtResource("2_kblac")]
+position = Vector2(570, 126)

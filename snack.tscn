@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://snack.gd" id="1_syoud"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n2kuc"]
-size = Vector2(114, 129)
+size = Vector2(13.8333, 16)
 
 [node name="Snack" type="RigidBody2D"]
 continuous_cd = 1
@@ -14,11 +14,12 @@ freeze_mode = 1
 script = ExtResource("1_syoud")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(8, 8)
+scale = Vector2(4, 4)
 texture = ExtResource("1_awius")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -0.5)
+position = Vector2(0.5, 1.00002)
+scale = Vector2(4, 4)
 shape = SubResource("RectangleShape2D_n2kuc")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

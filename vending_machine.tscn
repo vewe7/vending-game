@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://da50b2yxvki3y"]
+
+[ext_resource type="Script" path="res://vendMac.gd" id="1_c3hid"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pcmt2"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"base",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"inside",
+"speed": 5.0
+}]
+
+[node name="VendingMachine" type="RigidBody2D"]
+position = Vector2(40, 40)
+script = ExtResource("1_c3hid")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-494, -278)
+scale = Vector2(3.05, 3.41118)
+sprite_frames = SubResource("SpriteFrames_pcmt2")
+animation = &"inside"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

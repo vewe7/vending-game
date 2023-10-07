@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://lhfeivoxr77s"]
+[gd_scene load_steps=46 format=3 uid="uid://lhfeivoxr77s"]
 
 [ext_resource type="Script" path="res://vendMac.gd" id="1_c3hid"]
 [ext_resource type="Texture2D" uid="uid://c7aux7ilglbjc" path="res://sprites/Foreground.png" id="2_6cfla"]
@@ -15,6 +15,14 @@
 [ext_resource type="Texture2D" uid="uid://bcuga5aq8mmjp" path="res://sprites/SaltnVin_Lays.png" id="13_8atas"]
 [ext_resource type="Texture2D" uid="uid://d2l6nl60n7vqm" path="res://sprites/SaltnVin_Pringles.png" id="14_58crv"]
 [ext_resource type="Texture2D" uid="uid://bsp5hkoyg1kue" path="res://sprites/SourCream_Ruffs.png" id="15_pidjb"]
+[ext_resource type="Texture2D" uid="uid://cmqmw5f2og3wa" path="res://sprites/Blonde_Oreo.png" id="16_7t20t"]
+[ext_resource type="Texture2D" uid="uid://wt1ydevbdlne" path="res://sprites/Matcha_KitKat.png" id="17_5dr32"]
+[ext_resource type="Texture2D" uid="uid://bvylc05p5eva8" path="res://sprites/MnM.png" id="18_22owa"]
+[ext_resource type="Texture2D" uid="uid://lbe0psnsexwe" path="res://sprites/Orange_NatureValley.png" id="19_m5apc"]
+[ext_resource type="Texture2D" uid="uid://7s72bkgqiaak" path="res://sprites/Purple_MnM.png" id="20_4lsa4"]
+[ext_resource type="Texture2D" uid="uid://dlwehdpm8jxss" path="res://sprites/Reeses.png" id="21_q1dpi"]
+[ext_resource type="Texture2D" uid="uid://hlo1smu3jlem" path="res://sprites/Snickers.png" id="22_abtfx"]
+[ext_resource type="Texture2D" uid="uid://ba42i36jb70u4" path="res://sprites/Sour_Skittles.png" id="23_td1l7"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pcmt2"]
 animations = [{
@@ -170,6 +178,94 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_v3fp5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_7t20t")
+}],
+"loop": true,
+"name": &"cookie",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h8q3s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_5dr32")
+}],
+"loop": true,
+"name": &"bar",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aiubg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_22owa")
+}],
+"loop": true,
+"name": &"bag",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r1yj8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_m5apc")
+}],
+"loop": true,
+"name": &"bar",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wll2d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_4lsa4")
+}],
+"loop": true,
+"name": &"bag",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ylp2x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_q1dpi")
+}],
+"loop": true,
+"name": &"bar",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3w1so"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_abtfx")
+}],
+"loop": true,
+"name": &"bar",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qbqcx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_td1l7")
+}],
+"loop": true,
+"name": &"bag",
+"speed": 5.0
+}]
+
 [node name="VendingMachine" type="Area2D"]
 script = ExtResource("1_c3hid")
 
@@ -226,8 +322,8 @@ sprite_frames = SubResource("SpriteFrames_q6ct7")
 animation = &"bar"
 
 [node name="oreo" type="AnimatedSprite2D" parent="."]
-position = Vector2(-72, 1.37495)
-scale = Vector2(2.25018, 1.92188)
+position = Vector2(-11, 1.19209e-07)
+scale = Vector2(2.12509, 1.92188)
 sprite_frames = SubResource("SpriteFrames_w5d0c")
 animation = &"cookie"
 
@@ -258,4 +354,52 @@ animation = &"can"
 position = Vector2(-10, -147)
 scale = Vector2(2.281, 2.563)
 sprite_frames = SubResource("SpriteFrames_wjgiu")
+animation = &"bag"
+
+[node name="blondeOreos" type="AnimatedSprite2D" parent="."]
+position = Vector2(-41, 0)
+scale = Vector2(2.25, 1.922)
+sprite_frames = SubResource("SpriteFrames_v3fp5")
+animation = &"cookie"
+
+[node name="matKitKat" type="AnimatedSprite2D" parent="."]
+position = Vector2(-72, -3)
+scale = Vector2(2.062, 2.609)
+sprite_frames = SubResource("SpriteFrames_h8q3s")
+animation = &"bar"
+
+[node name="pMnM" type="AnimatedSprite2D" parent="."]
+position = Vector2(-13, 69)
+scale = Vector2(2.062, 2.609)
+sprite_frames = SubResource("SpriteFrames_aiubg")
+animation = &"bag"
+
+[node name="orangeNatureValley" type="AnimatedSprite2D" parent="."]
+position = Vector2(-73, 69)
+scale = Vector2(2.75, 2.5)
+sprite_frames = SubResource("SpriteFrames_r1yj8")
+animation = &"bar"
+
+[node name="purpMnM" type="AnimatedSprite2D" parent="."]
+position = Vector2(-42, 69)
+scale = Vector2(2.062, 2.5)
+sprite_frames = SubResource("SpriteFrames_wll2d")
+animation = &"bag"
+
+[node name="reeses" type="AnimatedSprite2D" parent="."]
+position = Vector2(20, -3)
+scale = Vector2(2.75, 2.5)
+sprite_frames = SubResource("SpriteFrames_ylp2x")
+animation = &"bar"
+
+[node name="snickers" type="AnimatedSprite2D" parent="."]
+position = Vector2(21, 69)
+scale = Vector2(2.2, 2.609)
+sprite_frames = SubResource("SpriteFrames_3w1so")
+animation = &"bar"
+
+[node name="sourSkittles" type="AnimatedSprite2D" parent="."]
+position = Vector2(50, 68)
+scale = Vector2(2.75, 2.5)
+sprite_frames = SubResource("SpriteFrames_qbqcx")
 animation = &"bag"

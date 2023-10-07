@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cal84okvyfmdu"]
+[gd_scene load_steps=6 format=3 uid="uid://cal84okvyfmdu"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_m0krb"]
 [ext_resource type="PackedScene" uid="uid://dat41afu2rf2f" path="res://snack.tscn" id="2_kblac"]
 [ext_resource type="PackedScene" uid="uid://cmj0vwv4ay05j" path="res://snackstuck.tscn" id="3_no2ja"]
+[ext_resource type="PackedScene" uid="uid://lhfeivoxr77s" path="res://vending_machine.tscn" id="4_7o7kt"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4x0fc"]
 bounce = 2.0
@@ -13,14 +14,19 @@ script = ExtResource("1_m0krb")
 snack_scene = ExtResource("2_kblac")
 
 [node name="Snack2" parent="." node_paths=PackedStringArray("stuck_snack_scene") instance=ExtResource("2_kblac")]
-position = Vector2(552, 251)
+position = Vector2(200, 60)
 physics_material_override = SubResource("PhysicsMaterial_4x0fc")
 stuck_snack_scene = NodePath("../SnackStuck")
 
 [node name="Snack3" parent="." node_paths=PackedStringArray("stuck_snack_scene") instance=ExtResource("2_kblac")]
-position = Vector2(559, -200)
+position = Vector2(200, -300)
 physics_material_override = SubResource("PhysicsMaterial_4x0fc")
 stuck_snack_scene = NodePath("../SnackStuck")
 
 [node name="SnackStuck" parent="." instance=ExtResource("3_no2ja")]
-position = Vector2(565, 495)
+position = Vector2(192, 760)
+rotation = 1.33343
+
+[node name="VendingMachine" parent="." instance=ExtResource("4_7o7kt")]
+position = Vector2(308, 487)
+scale = Vector2(2, 2)

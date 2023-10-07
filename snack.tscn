@@ -3,13 +3,18 @@
 [ext_resource type="Texture2D" uid="uid://bxy5kxsealnh8" path="res://sprites/Classic_lays.png" id="1_awius"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n2kuc"]
-size = Vector2(112, 128)
+size = Vector2(114, 129)
 
 [node name="Snack" type="RigidBody2D"]
+continuous_cd = 1
+max_contacts_reported = 100
+contact_monitor = true
+freeze_mode = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(8, 8)
 texture = ExtResource("1_awius")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_n2kuc")

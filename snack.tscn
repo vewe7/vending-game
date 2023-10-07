@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dat41afu2rf2f"]
+[gd_scene load_steps=4 format=3 uid="uid://dat41afu2rf2f"]
 
 [ext_resource type="Texture2D" uid="uid://bxy5kxsealnh8" path="res://sprites/Classic_lays.png" id="1_awius"]
+[ext_resource type="Script" path="res://snack.gd" id="1_syoud"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n2kuc"]
 size = Vector2(114, 129)
@@ -10,6 +11,7 @@ continuous_cd = 1
 max_contacts_reported = 1
 contact_monitor = true
 freeze_mode = 1
+script = ExtResource("1_syoud")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(8, 8)
@@ -18,3 +20,6 @@ texture = ExtResource("1_awius")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_n2kuc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="hit" from="." to="." method="take_hit"]

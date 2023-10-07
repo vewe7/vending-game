@@ -12,11 +12,15 @@ absorbent = true
 script = ExtResource("1_m0krb")
 snack_scene = ExtResource("2_kblac")
 
-[node name="Snack2" parent="." instance=ExtResource("2_kblac")]
-position = Vector2(556, 56)
+[node name="Snack2" parent="." node_paths=PackedStringArray("stuck_snack_scene") instance=ExtResource("2_kblac")]
+position = Vector2(552, 251)
 physics_material_override = SubResource("PhysicsMaterial_4x0fc")
+stuck_snack_scene = NodePath("../SnackStuck")
+
+[node name="Snack3" parent="." node_paths=PackedStringArray("stuck_snack_scene") instance=ExtResource("2_kblac")]
+position = Vector2(559, -200)
+physics_material_override = SubResource("PhysicsMaterial_4x0fc")
+stuck_snack_scene = NodePath("../SnackStuck")
 
 [node name="SnackStuck" parent="." instance=ExtResource("3_no2ja")]
 position = Vector2(565, 495)
-
-[node name="PinJoint2D" type="PinJoint2D" parent="."]

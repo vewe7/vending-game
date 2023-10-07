@@ -170,8 +170,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="VendingMachine" type="RigidBody2D"]
-position = Vector2(58821, -1326)
+[node name="VendingMachine" type="Area2D"]
 script = ExtResource("1_c3hid")
 
 [node name="machineOuter" type="AnimatedSprite2D" parent="."]

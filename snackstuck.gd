@@ -8,10 +8,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
-
+	
 func _on_body_entered(body):
-	print("meow")
+	print(body.linear_velocity.y)
 
-func _on_area_2d_body_entered(body):
-	print(body)

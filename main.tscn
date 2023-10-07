@@ -13,11 +13,10 @@ script = ExtResource("1_m0krb")
 snack_scene = ExtResource("2_kblac")
 
 [node name="Snack2" parent="." instance=ExtResource("2_kblac")]
-position = Vector2(567, 151)
+position = Vector2(556, 56)
 physics_material_override = SubResource("PhysicsMaterial_4x0fc")
 
 [node name="SnackStuck" parent="." instance=ExtResource("3_no2ja")]
 position = Vector2(565, 495)
-rotation = 1.77675
 
 [node name="PinJoint2D" type="PinJoint2D" parent="."]

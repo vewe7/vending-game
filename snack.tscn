@@ -7,7 +7,7 @@ size = Vector2(114, 129)
 
 [node name="Snack" type="RigidBody2D"]
 continuous_cd = 1
-max_contacts_reported = 100
+max_contacts_reported = 1
 contact_monitor = true
 freeze_mode = 1
 

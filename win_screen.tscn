@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://b68xsah3jhtpg"]
+[gd_scene load_steps=2 format=3 uid="uid://b68xsah3jhtpg"]
+
+[ext_resource type="Texture2D" uid="uid://c44coyxabmo0k" path="res://sprites/YouWon.png" id="1_2gvcx"]
 
 [node name="WinScreen" type="Node"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1151.25, 773)
+scale = Vector2(6.13733, 6.88)
+texture = ExtResource("1_2gvcx")

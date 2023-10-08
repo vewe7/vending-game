@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://main.gd" id="1_m0krb"]
 [ext_resource type="PackedScene" uid="uid://dat41afu2rf2f" path="res://snack.tscn" id="2_kblac"]
-[ext_resource type="PackedScene" uid="uid://jvmwpx21j6rn" path="res://hud.tscn" id="3_c8va4"]
+[ext_resource type="PackedScene" uid="uid://dpgys7jsnhcgs" path="res://hud.tscn" id="3_c8va4"]
 [ext_resource type="PackedScene" uid="uid://cmj0vwv4ay05j" path="res://snackstuck.tscn" id="3_no2ja"]
 [ext_resource type="PackedScene" uid="uid://3v5swn0r7cnc" path="res://vending_machine.tscn" id="4_7o7kt"]
 [ext_resource type="Texture2D" uid="uid://b7vlrisg5f0ar" path="res://sprites/Background1.png" id="6_cdkfo"]
@@ -151,7 +151,7 @@ sprite_filename = "Classic_lays.png"
 [node name="SpawnerA1" parent="." instance=ExtResource("7_gdu2t")]
 position = Vector2(961, 354)
 collision_shape_filename = "chip_standard.tres"
-sprite_filename = "Classic_lays.png"
+sprite_filename = "Barb_Lays.png"
 
 [node name="SpawnerA4" parent="." instance=ExtResource("7_gdu2t")]
 position = Vector2(1211, 350)

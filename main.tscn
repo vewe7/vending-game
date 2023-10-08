@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cal84okvyfmdu"]
+[gd_scene load_steps=7 format=3 uid="uid://cal84okvyfmdu"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_m0krb"]
 [ext_resource type="PackedScene" uid="uid://dat41afu2rf2f" path="res://snack.tscn" id="2_kblac"]
 [ext_resource type="PackedScene" uid="uid://dpgys7jsnhcgs" path="res://hud.tscn" id="3_c8va4"]
 [ext_resource type="PackedScene" uid="uid://cmj0vwv4ay05j" path="res://snackstuck.tscn" id="3_no2ja"]
 [ext_resource type="PackedScene" uid="uid://lhfeivoxr77s" path="res://vending_machine.tscn" id="4_7o7kt"]
-[ext_resource type="Script" path="res://VendButton.gd" id="4_daypl"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4x0fc"]
 bounce = 2.0
@@ -17,32 +16,24 @@ snack_scene = ExtResource("2_kblac")
 
 [node name="HUD" parent="." instance=ExtResource("3_c8va4")]
 
-[node name="VendButton" parent="HUD" index="2"]
-anchors_preset = -1
-offset_left = 1258.0
-offset_top = 398.0
-offset_right = 1445.0
-offset_bottom = 441.0
-script = ExtResource("4_daypl")
-
-[node name="VendButton2" parent="HUD" index="3"]
+[node name="VendButton2" parent="HUD" index="8"]
 offset_left = 1271.0
 offset_top = 496.0
 offset_right = 1440.0
 offset_bottom = 555.0
 
 [node name="Snack2" parent="." node_paths=PackedStringArray("stuck_snack_scene") instance=ExtResource("2_kblac")]
-position = Vector2(872, 126)
+position = Vector2(860, 442)
 physics_material_override = SubResource("PhysicsMaterial_4x0fc")
 stuck_snack_scene = NodePath("../SnackStuck")
 
 [node name="Snack3" parent="." node_paths=PackedStringArray("stuck_snack_scene") instance=ExtResource("2_kblac")]
-position = Vector2(696, 37)
+position = Vector2(634, 299)
 physics_material_override = SubResource("PhysicsMaterial_4x0fc")
 stuck_snack_scene = NodePath("../SnackStuck")
 
 [node name="SnackStuck" parent="." instance=ExtResource("3_no2ja")]
-position = Vector2(840, 1002)
+position = Vector2(672, 1010)
 rotation = 1.33343
 
 [node name="VendingMachine" parent="." instance=ExtResource("4_7o7kt")]

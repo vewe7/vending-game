@@ -1,6 +1,7 @@
 [gd_scene load_steps=66 format=3 uid="uid://lhfeivoxr77s"]
 
 [ext_resource type="Script" path="res://vendMac.gd" id="1_c3hid"]
+[ext_resource type="Texture2D" uid="uid://bffbvi4orlrut" path="res://sprites/Foreground1.png" id="3_03uif"]
 [ext_resource type="Texture2D" uid="uid://d3lrrn822yvf8" path="res://sprites/Background.png" id="3_8vqt0"]
 [ext_resource type="Texture2D" uid="uid://b5q2say23wvsh" path="res://sprites/Barb_Lays.png" id="4_0w800"]
 [ext_resource type="Texture2D" uid="uid://biiox1xpng5mi" path="res://sprites/Chedd_Pringles.png" id="5_pv3o6"]
@@ -33,7 +34,10 @@
 [ext_resource type="Texture2D" uid="uid://bk35tixoupnuk" path="res://sprites/Snyders.png" id="31_ylf5r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wkh2t"]
-size = Vector2(311, 28)
+size = Vector2(318.5, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ng75h"]
+size = Vector2(527, 20)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_owjli"]
 animations = [{
@@ -43,6 +47,17 @@ animations = [{
 }],
 "loop": true,
 "name": &"machineInner",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qvn8c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_03uif")
+}],
+"loop": true,
+"name": &"machineOuter",
 "speed": 5.0
 }]
 
@@ -343,15 +358,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_suld5"]
-size = Vector2(43, 430)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kip7j"]
-size = Vector2(45, 431.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fxm56"]
-size = Vector2(310, 25)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_q4usv"]
 animations = [{
 "frames": [{
@@ -377,10 +383,39 @@ animations = [{
 [node name="VendingMachine" type="Area2D"]
 script = ExtResource("1_c3hid")
 
-[node name="bottom" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-10.5, 211)
+[node name="Bottom" type="StaticBody2D" parent="."]
+position = Vector2(-12, 247)
+metadata/_edit_group_ = true
+
+[node name="CollisionShapeBottom" type="CollisionShape2D" parent="Bottom"]
+position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_wkh2t")
+
+[node name="Top" type="StaticBody2D" parent="."]
+position = Vector2(-11, -263)
+metadata/_edit_group_ = true
+
+[node name="CollisionShapeBottom" type="CollisionShape2D" parent="Top"]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_wkh2t")
+
+[node name="SideLeft" type="StaticBody2D" parent="."]
+position = Vector2(-147, 94)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="CollisionShapeBottom" type="CollisionShape2D" parent="SideLeft"]
+position = Vector2(-104.5, -4.57764e-05)
+shape = SubResource("RectangleShape2D_ng75h")
+
+[node name="SideLeft2" type="StaticBody2D" parent="."]
+position = Vector2(133, 96)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="CollisionShapeBottom" type="CollisionShape2D" parent="SideLeft2"]
+position = Vector2(-104.5, -4.57764e-05)
+shape = SubResource("RectangleShape2D_ng75h")
 
 [node name="machineInner" type="AnimatedSprite2D" parent="."]
 z_index = -1
@@ -389,191 +424,272 @@ scale = Vector2(3.06332, 3.4186)
 sprite_frames = SubResource("SpriteFrames_owjli")
 animation = &"machineInner"
 metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="machineOuter" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -5)
+scale = Vector2(3.063, 3.419)
+sprite_frames = SubResource("SpriteFrames_qvn8c")
+animation = &"machineOuter"
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [node name="barbLays" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(-95, -216)
 scale = Vector2(1.93753, 2.24219)
 sprite_frames = SubResource("SpriteFrames_5jgri")
 animation = &"bag"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="cheddPring" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(-96, -74)
 scale = Vector2(2.75002, 3)
 sprite_frames = SubResource("SpriteFrames_m3lm3")
 animation = &"bag"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="cheddRuffs" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(-55, -146)
 scale = Vector2(2.2813, 2.56251)
 sprite_frames = SubResource("SpriteFrames_msocb")
 animation = &"bag"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="classicLays" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(-54.002, -216)
 scale = Vector2(1.9, 2.242)
 sprite_frames = SubResource("SpriteFrames_x0nsu")
 animation = &"bag"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="KitKat" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(-103, -3.00006)
 scale = Vector2(2.06246, 2.60938)
 sprite_frames = SubResource("SpriteFrames_t8mj3")
 animation = &"bar"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="natureValley" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(-72, 69)
 scale = Vector2(2.75, 2.5)
 sprite_frames = SubResource("SpriteFrames_q6ct7")
 animation = &"bar"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="oreo" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(-11, 1.19209e-07)
 scale = Vector2(2.12509, 1.92188)
 sprite_frames = SubResource("SpriteFrames_w5d0c")
 animation = &"cookie"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="originRuffs" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(-97.002, -146.728)
 scale = Vector2(2.26569, 2.534)
 sprite_frames = SubResource("SpriteFrames_jus5u")
 animation = &"bag"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="srcrPring" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(-53, -74)
 scale = Vector2(2.75, 3)
 sprite_frames = SubResource("SpriteFrames_1pwr7")
 animation = &"can"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="saltvinLays" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(-12, -216)
 scale = Vector2(1.9, 2.242)
 sprite_frames = SubResource("SpriteFrames_r6iog")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="saltvinPrings" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(-10, -74)
 scale = Vector2(2.75, 3)
 sprite_frames = SubResource("SpriteFrames_a4n1q")
 animation = &"can"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="srcrRuffs" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(-10, -147)
 scale = Vector2(2.281, 2.563)
 sprite_frames = SubResource("SpriteFrames_wjgiu")
 animation = &"bag"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="blondeOreos" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(-41, 0)
 scale = Vector2(2.25, 1.922)
 sprite_frames = SubResource("SpriteFrames_v3fp5")
 animation = &"cookie"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="matKitKat" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(-72, -3)
 scale = Vector2(2.062, 2.609)
 sprite_frames = SubResource("SpriteFrames_h8q3s")
 animation = &"bar"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="pMnM" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(-41, 68)
 scale = Vector2(2.062, 2.609)
 sprite_frames = SubResource("SpriteFrames_aiubg")
 animation = &"bag"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="orangeNatureValley" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(-102, 69)
 scale = Vector2(2.75, 2.5)
 sprite_frames = SubResource("SpriteFrames_r1yj8")
 animation = &"bar"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="purpMnM" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(-13, 68)
 scale = Vector2(2.062, 2.5)
 sprite_frames = SubResource("SpriteFrames_wll2d")
 animation = &"bag"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="reeses" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(19, 69)
 scale = Vector2(2.75, 2.5)
 sprite_frames = SubResource("SpriteFrames_ylp2x")
 animation = &"bar"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="snickers" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(23, -2)
 scale = Vector2(2.2, 2.609)
 sprite_frames = SubResource("SpriteFrames_3w1so")
 animation = &"bar"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="sourSkittles" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(51, 70)
 scale = Vector2(2.75, 2.5)
 sprite_frames = SubResource("SpriteFrames_qbqcx")
 animation = &"bag"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="skittles" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(82, 70)
 scale = Vector2(2.75, 2.5)
 sprite_frames = SubResource("SpriteFrames_vi0g7")
 animation = &"bag"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="almdjoy" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(82, -3)
 scale = Vector2(2.2, 2.609)
 sprite_frames = SubResource("SpriteFrames_0me1v")
 animation = &"bar"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="3muskets" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(50, 0)
 scale = Vector2(2.2, 2.609)
 sprite_frames = SubResource("SpriteFrames_3elgo")
 animation = &"bar"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="redDoritos" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(31, -215)
 scale = Vector2(1.9, 2.242)
 sprite_frames = SubResource("SpriteFrames_ito0v")
 animation = &"bag"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="purpDoritos" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(74, -216)
 scale = Vector2(1.9, 2.242)
 sprite_frames = SubResource("SpriteFrames_3j30s")
 animation = &"bag"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="blueDoritos" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(74, -145)
 scale = Vector2(1.9, 2.242)
 sprite_frames = SubResource("SpriteFrames_dral1")
 animation = &"bag"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="cheezit" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(32, -73)
 scale = Vector2(2.281, 2.563)
 sprite_frames = SubResource("SpriteFrames_qerq3")
 animation = &"bag"
-
-[node name="side1" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(123.5, -19)
-shape = SubResource("RectangleShape2D_suld5")
-
-[node name="side2" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-145, -19.75)
-shape = SubResource("RectangleShape2D_kip7j")
-
-[node name="top" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-11, -254)
-shape = SubResource("RectangleShape2D_fxm56")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="funnions" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(74, -74)
 scale = Vector2(2.281, 2.583)
 sprite_frames = SubResource("SpriteFrames_q4usv")
 animation = &"bag"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="pretzels" type="AnimatedSprite2D" parent="."]
+z_index = -1
 position = Vector2(33, -146)
 scale = Vector2(2.281, 2.583)
 sprite_frames = SubResource("SpriteFrames_yhsif")
 animation = &"bag"
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true

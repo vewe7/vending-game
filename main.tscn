@@ -1,12 +1,73 @@
-[gd_scene load_steps=9 format=3 uid="uid://cal84okvyfmdu"]
+[gd_scene load_steps=24 format=3 uid="uid://cal84okvyfmdu"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_m0krb"]
 [ext_resource type="PackedScene" uid="uid://dat41afu2rf2f" path="res://snack.tscn" id="2_kblac"]
 [ext_resource type="PackedScene" uid="uid://dpgys7jsnhcgs" path="res://hud.tscn" id="3_c8va4"]
 [ext_resource type="PackedScene" uid="uid://cmj0vwv4ay05j" path="res://snackstuck.tscn" id="3_no2ja"]
+[ext_resource type="Texture2D" uid="uid://fghusumhvk7p" path="res://sprites/Title0.png" id="4_0nep6"]
 [ext_resource type="PackedScene" uid="uid://3v5swn0r7cnc" path="res://vending_machine.tscn" id="4_7o7kt"]
+[ext_resource type="Texture2D" uid="uid://csfhaqpgsc32t" path="res://sprites/Title1.png" id="5_ukxhd"]
 [ext_resource type="Texture2D" uid="uid://b7vlrisg5f0ar" path="res://sprites/Background1.png" id="6_cdkfo"]
+[ext_resource type="Texture2D" uid="uid://mmwj1px3ej6c" path="res://sprites/Title2.png" id="6_ladx0"]
+[ext_resource type="Texture2D" uid="uid://yptyrpxfnytw" path="res://sprites/Title3.png" id="7_dc4nc"]
 [ext_resource type="PackedScene" uid="uid://cmpd24rubmes5" path="res://spawner.tscn" id="7_gdu2t"]
+[ext_resource type="Texture2D" uid="uid://y8l75dyikd5u" path="res://sprites/Title4.png" id="8_7tguw"]
+[ext_resource type="Texture2D" uid="uid://cmksinhxlfkpj" path="res://sprites/Title5.png" id="9_x04or"]
+[ext_resource type="Texture2D" uid="uid://cu5gfc7tl1ppj" path="res://sprites/Title6.png" id="10_wf3b3"]
+[ext_resource type="Texture2D" uid="uid://capl5o16qwbnu" path="res://sprites/Title7.png" id="11_5i80s"]
+[ext_resource type="Texture2D" uid="uid://y6qu2jvhcd63" path="res://sprites/Title8.png" id="12_l6wkx"]
+[ext_resource type="Texture2D" uid="uid://bnvn434fgftt3" path="res://sprites/Title9.png" id="13_1mduo"]
+[ext_resource type="Texture2D" uid="uid://b53i4v34buasq" path="res://sprites/Title10.png" id="14_sslu8"]
+[ext_resource type="Texture2D" uid="uid://bjncq5hqou4fi" path="res://sprites/Title11.png" id="15_5jskf"]
+[ext_resource type="Texture2D" uid="uid://5wvwiaorigrn" path="res://sprites/Title12.png" id="16_vvg1y"]
+[ext_resource type="Script" path="res://Title.gd" id="17_lg468"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t72ua"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_0nep6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ukxhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ladx0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_dc4nc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7tguw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_x04or")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_wf3b3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5i80s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_l6wkx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_1mduo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_sslu8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_5jskf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_vvg1y")
+}],
+"loop": true,
+"name": &"frames",
+"speed": 5.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pqdvi"]
 animations = [{
@@ -125,6 +186,14 @@ offset_left = 1607.0
 offset_top = 984.0
 offset_right = 1755.0
 offset_bottom = 1042.0
+
+[node name="Title" type="AnimatedSprite2D" parent="."]
+z_index = 8
+position = Vector2(1120, 126)
+sprite_frames = SubResource("SpriteFrames_t72ua")
+animation = &"frames"
+frame_progress = 0.382521
+script = ExtResource("17_lg468")
 
 [node name="SnackStuck" parent="." instance=ExtResource("3_no2ja")]
 position = Vector2(1210, 1042)

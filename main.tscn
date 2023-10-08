@@ -1,14 +1,26 @@
-[gd_scene load_steps=7 format=3 uid="uid://cal84okvyfmdu"]
+[gd_scene load_steps=9 format=3 uid="uid://cal84okvyfmdu"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_m0krb"]
 [ext_resource type="PackedScene" uid="uid://dat41afu2rf2f" path="res://snack.tscn" id="2_kblac"]
 [ext_resource type="PackedScene" uid="uid://dpgys7jsnhcgs" path="res://hud.tscn" id="3_c8va4"]
 [ext_resource type="PackedScene" uid="uid://cmj0vwv4ay05j" path="res://snackstuck.tscn" id="3_no2ja"]
 [ext_resource type="PackedScene" uid="uid://lhfeivoxr77s" path="res://vending_machine.tscn" id="4_7o7kt"]
+[ext_resource type="Texture2D" uid="uid://byou20hvuq4ah" path="res://sprites/Background1.png" id="6_cdkfo"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4x0fc"]
 bounce = 2.0
 absorbent = true
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pqdvi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_cdkfo")
+}],
+"loop": true,
+"name": &"background",
+"speed": 5.0
+}]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_m0krb")
@@ -37,9 +49,15 @@ position = Vector2(672, 1010)
 rotation = 1.33343
 
 [node name="VendingMachine" parent="." instance=ExtResource("4_7o7kt")]
-position = Vector2(811, 712)
+position = Vector2(1148, 785)
 scale = Vector2(2, 2)
 metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
+
+[node name="Background" type="AnimatedSprite2D" parent="."]
+z_index = -4
+position = Vector2(1147, 773)
+scale = Vector2(6.10933, 6.85111)
+sprite_frames = SubResource("SpriteFrames_pqdvi")
+animation = &"background"
 
 [editable path="HUD"]

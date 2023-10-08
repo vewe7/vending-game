@@ -34,11 +34,100 @@ offset_top = 196.0
 offset_right = 2261.0
 offset_bottom = 287.0
 
+[node name="ScreenLabel" parent="HUD" index="1"]
+offset_left = 1614.0
+offset_top = 441.0
+offset_right = 1943.0
+offset_bottom = 538.95
+
+[node name="VendButtonA" parent="HUD" index="2"]
+anchors_preset = -1
+anchor_left = 0.687
+anchor_top = 0.269
+anchor_right = 0.687
+anchor_bottom = 0.269
+offset_left = 24.8999
+offset_top = 148.05
+offset_right = 177.9
+offset_bottom = 223.05
+
+[node name="VendButtonB" parent="HUD" index="3"]
+offset_left = 1608.0
+offset_top = 639.0
+offset_right = 1756.0
+offset_bottom = 700.0
+
+[node name="VendButtonC" parent="HUD" index="4"]
+offset_left = 1608.0
+offset_top = 706.0
+offset_right = 1757.0
+offset_bottom = 768.0
+
+[node name="VendButtonD" parent="HUD" index="5"]
+offset_left = 1616.0
+offset_top = 773.0
+offset_right = 1755.0
+offset_bottom = 841.0
+
+[node name="VendButtonE" parent="HUD" index="6"]
+offset_left = 1623.0
+offset_top = 848.0
+offset_right = 1751.0
+offset_bottom = 908.0
+
+[node name="VendButton1" parent="HUD" index="7"]
+offset_left = 1800.0
+offset_top = 566.0
+offset_right = 1944.0
+offset_bottom = 631.0
+
 [node name="VendButton2" parent="HUD" index="8"]
-offset_left = 1271.0
-offset_top = 496.0
-offset_right = 1440.0
-offset_bottom = 555.0
+offset_left = 1803.0
+offset_top = 642.0
+offset_right = 1945.0
+offset_bottom = 701.0
+
+[node name="VendButton3" parent="HUD" index="9"]
+offset_left = 1797.0
+offset_top = 706.0
+offset_right = 1942.0
+offset_bottom = 770.0
+
+[node name="VendButton4" parent="HUD" index="10"]
+offset_left = 1800.0
+offset_top = 772.0
+offset_right = 1945.0
+offset_bottom = 837.0
+
+[node name="VendButton5" parent="HUD" index="11"]
+offset_left = 1804.0
+offset_top = 846.0
+offset_right = 1942.0
+offset_bottom = 907.0
+
+[node name="VendButton6" parent="HUD" index="12"]
+offset_left = 1796.0
+offset_top = 913.0
+offset_right = 1945.0
+offset_bottom = 975.0
+
+[node name="VendButton7" parent="HUD" index="13"]
+offset_left = 1795.0
+offset_top = 980.0
+offset_right = 1944.0
+offset_bottom = 1040.0
+
+[node name="VendButtonClear" parent="HUD" index="14"]
+offset_left = 1606.0
+offset_top = 913.0
+offset_right = 1755.0
+offset_bottom = 978.0
+
+[node name="VendButtonEnter" parent="HUD" index="15"]
+offset_left = 1607.0
+offset_top = 984.0
+offset_right = 1755.0
+offset_bottom = 1042.0
 
 [node name="Snack2" parent="." node_paths=PackedStringArray("stuck_snack_scene") instance=ExtResource("2_kblac")]
 position = Vector2(1202, 726)

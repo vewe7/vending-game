@@ -23,7 +23,7 @@ script = ExtResource("1_10pdm")
 balance_label = NodePath("../BalanceLabel")
 
 [node name="VendButtonA" type="Button" parent="."]
-visible = false
+self_modulate = Color(1, 1, 1, 0)
 offset_left = 31.0
 offset_top = 154.0
 offset_right = 70.0
@@ -31,7 +31,7 @@ offset_bottom = 181.0
 metadata/_edit_group_ = true
 
 [node name="VendButtonB" type="Button" parent="."]
-visible = false
+self_modulate = Color(1, 1, 1, 0)
 offset_left = 31.0
 offset_top = 154.0
 offset_right = 70.0
@@ -39,7 +39,7 @@ offset_bottom = 181.0
 metadata/_edit_group_ = true
 
 [node name="VendButtonC" type="Button" parent="."]
-visible = false
+self_modulate = Color(1, 1, 1, 0)
 offset_left = 31.0
 offset_top = 154.0
 offset_right = 70.0
@@ -47,7 +47,7 @@ offset_bottom = 181.0
 metadata/_edit_group_ = true
 
 [node name="VendButtonD" type="Button" parent="."]
-visible = false
+self_modulate = Color(1, 1, 1, 0)
 offset_left = 31.0
 offset_top = 154.0
 offset_right = 70.0
@@ -55,7 +55,7 @@ offset_bottom = 181.0
 metadata/_edit_group_ = true
 
 [node name="VendButtonE" type="Button" parent="."]
-visible = false
+self_modulate = Color(1, 1, 1, 0)
 offset_left = 31.0
 offset_top = 154.0
 offset_right = 70.0
@@ -63,7 +63,7 @@ offset_bottom = 181.0
 metadata/_edit_group_ = true
 
 [node name="VendButton1" type="Button" parent="."]
-visible = false
+self_modulate = Color(1, 1, 1, 0)
 offset_left = 31.0
 offset_top = 154.0
 offset_right = 70.0
@@ -71,7 +71,7 @@ offset_bottom = 181.0
 metadata/_edit_group_ = true
 
 [node name="VendButton2" type="Button" parent="."]
-visible = false
+self_modulate = Color(1, 1, 1, 0)
 offset_left = 31.0
 offset_top = 154.0
 offset_right = 70.0
@@ -79,7 +79,7 @@ offset_bottom = 181.0
 metadata/_edit_group_ = true
 
 [node name="VendButton3" type="Button" parent="."]
-visible = false
+self_modulate = Color(1, 1, 1, 0)
 offset_left = 31.0
 offset_top = 154.0
 offset_right = 70.0
@@ -87,7 +87,7 @@ offset_bottom = 181.0
 metadata/_edit_group_ = true
 
 [node name="VendButton4" type="Button" parent="."]
-visible = false
+self_modulate = Color(1, 1, 1, 0)
 offset_left = 31.0
 offset_top = 154.0
 offset_right = 70.0
@@ -95,7 +95,7 @@ offset_bottom = 181.0
 metadata/_edit_group_ = true
 
 [node name="VendButton5" type="Button" parent="."]
-visible = false
+self_modulate = Color(1, 1, 1, 0)
 offset_left = 31.0
 offset_top = 154.0
 offset_right = 70.0
@@ -103,7 +103,7 @@ offset_bottom = 181.0
 metadata/_edit_group_ = true
 
 [node name="VendButton6" type="Button" parent="."]
-visible = false
+self_modulate = Color(1, 1, 1, 0)
 offset_left = 31.0
 offset_top = 154.0
 offset_right = 70.0
@@ -111,7 +111,23 @@ offset_bottom = 181.0
 metadata/_edit_group_ = true
 
 [node name="VendButton7" type="Button" parent="."]
-visible = false
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 31.0
+offset_top = 154.0
+offset_right = 70.0
+offset_bottom = 181.0
+metadata/_edit_group_ = true
+
+[node name="VendButtonClear" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 31.0
+offset_top = 154.0
+offset_right = 70.0
+offset_bottom = 181.0
+metadata/_edit_group_ = true
+
+[node name="VendButtonEnter" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
 offset_left = 31.0
 offset_top = 154.0
 offset_right = 70.0
@@ -130,3 +146,5 @@ metadata/_edit_group_ = true
 [connection signal="pressed" from="VendButton5" to="ScreenLabel" method="_on_vend_button_pressed" binds= ["5"]]
 [connection signal="pressed" from="VendButton6" to="ScreenLabel" method="_on_vend_button_pressed" binds= ["6"]]
 [connection signal="pressed" from="VendButton7" to="ScreenLabel" method="_on_vend_button_pressed" binds= ["7"]]
+[connection signal="pressed" from="VendButtonClear" to="ScreenLabel" method="_on_vend_button_gexed" binds= ["Clear"]]
+[connection signal="pressed" from="VendButtonEnter" to="ScreenLabel" method="_on_vend_button_gexed_amongus" binds= ["Enter"]]

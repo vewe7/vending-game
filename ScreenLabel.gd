@@ -22,8 +22,8 @@ func update_balance_label():
 
 func _on_vend_button_pressed(input_val):
 	if (input_val == "Enter" && self.text.length() == 2):
-		self.text = ""
 		var price = PRICES[self.text]
+		self.text = ""
 		if balance - price >= 0:
 			balance -= price
 			update_balance_label()
@@ -33,4 +33,12 @@ func _on_vend_button_pressed(input_val):
 		self.text += input_val
 	elif self.text.length() == 0:
 		self.text += input_val
-		
+
+
+func _on_vend_button_gexed(extra_arg_0):
+	_on_vend_button_pressed(extra_arg_0)
+
+
+
+func _on_vend_button_gexed_amongus(extra_arg_0):
+	_on_vend_button_pressed(extra_arg_0)

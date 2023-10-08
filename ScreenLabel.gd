@@ -21,12 +21,14 @@ func update_balance_label():
 	balance_label.text = "$" + str(balance)
 
 func _on_vend_button_pressed(input_val):
-	if (input_val == "Enter" && self.text.length() == 2):
-		var price = PRICES[self.text]
-		self.text = ""
-		if balance - price >= 0:
-			balance -= price
-			update_balance_label()
+	if (input_val == "Enter"):
+		if (self.text.length() == 2):
+			var price = PRICES[self.text]
+			if balance - price >= 0:
+				balance -= price
+				update_balance_label()
+				get_parent().get_parent().get_node("Spawner" + self.text)._spawn_item()
+			self.text = ""
 	elif (input_val == "Clear"):
 		self.text = ""
 	elif (input_val.is_valid_int() && self.text.length() == 1):

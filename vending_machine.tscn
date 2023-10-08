@@ -1,0 +1,579 @@
+[gd_scene load_steps=66 format=3 uid="uid://lhfeivoxr77s"]
+
+[ext_resource type="Script" path="res://vendMac.gd" id="1_c3hid"]
+[ext_resource type="Texture2D" uid="uid://b6em84o2wq7h6" path="res://sprites/Background.png" id="3_8vqt0"]
+[ext_resource type="Texture2D" uid="uid://b5q2say23wvsh" path="res://sprites/Barb_Lays.png" id="4_0w800"]
+[ext_resource type="Texture2D" uid="uid://biiox1xpng5mi" path="res://sprites/Chedd_Pringles.png" id="5_pv3o6"]
+[ext_resource type="Texture2D" uid="uid://bf24mtj21rdy0" path="res://sprites/Chedd_Ruffs.png" id="6_wkkrq"]
+[ext_resource type="Texture2D" uid="uid://bxy5kxsealnh8" path="res://sprites/Classic_lays.png" id="7_k4mua"]
+[ext_resource type="Texture2D" uid="uid://dsuj1u0x6tjnr" path="res://sprites/KitKat.png" id="8_nyeiv"]
+[ext_resource type="Texture2D" uid="uid://bojvrk3k1uq7p" path="res://sprites/NatureValley.png" id="9_4q0ds"]
+[ext_resource type="Texture2D" uid="uid://salh1f1sa7f0" path="res://sprites/Oreo.png" id="10_igfox"]
+[ext_resource type="Texture2D" uid="uid://bdjrunb5c750i" path="res://sprites/Original_Ruffs.png" id="11_qf0qk"]
+[ext_resource type="Texture2D" uid="uid://c8j1jcxan7y11" path="res://sprites/Pringles.png" id="12_gpehp"]
+[ext_resource type="Texture2D" uid="uid://bcuga5aq8mmjp" path="res://sprites/SaltnVin_Lays.png" id="13_8atas"]
+[ext_resource type="Texture2D" uid="uid://d2l6nl60n7vqm" path="res://sprites/SaltnVin_Pringles.png" id="14_58crv"]
+[ext_resource type="Texture2D" uid="uid://bsp5hkoyg1kue" path="res://sprites/SourCream_Ruffs.png" id="15_pidjb"]
+[ext_resource type="Texture2D" uid="uid://cmqmw5f2og3wa" path="res://sprites/Blonde_Oreo.png" id="16_7t20t"]
+[ext_resource type="Texture2D" uid="uid://wt1ydevbdlne" path="res://sprites/Matcha_KitKat.png" id="17_5dr32"]
+[ext_resource type="Texture2D" uid="uid://bvylc05p5eva8" path="res://sprites/MnM.png" id="18_22owa"]
+[ext_resource type="Texture2D" uid="uid://lbe0psnsexwe" path="res://sprites/Orange_NatureValley.png" id="19_m5apc"]
+[ext_resource type="Texture2D" uid="uid://7s72bkgqiaak" path="res://sprites/Purple_MnM.png" id="20_4lsa4"]
+[ext_resource type="Texture2D" uid="uid://dlwehdpm8jxss" path="res://sprites/Reeses.png" id="21_q1dpi"]
+[ext_resource type="Texture2D" uid="uid://hlo1smu3jlem" path="res://sprites/Snickers.png" id="22_abtfx"]
+[ext_resource type="Texture2D" uid="uid://ba42i36jb70u4" path="res://sprites/Sour_Skittles.png" id="23_td1l7"]
+[ext_resource type="Texture2D" uid="uid://b6f83lao1ehgc" path="res://sprites/Skittles.png" id="24_dc3pm"]
+[ext_resource type="Texture2D" uid="uid://b4ug2vuwf5mng" path="res://sprites/AlmondJoy.png" id="25_usprx"]
+[ext_resource type="Texture2D" uid="uid://bvx1smbfcehmn" path="res://sprites/3Musk.png" id="26_bavq2"]
+[ext_resource type="Texture2D" uid="uid://boe275vr5u0ad" path="res://sprites/Blue_Dor.png" id="27_uryqx"]
+[ext_resource type="Texture2D" uid="uid://iqcixmdvg8ia" path="res://sprites/Purple_Dor.png" id="28_30ytj"]
+[ext_resource type="Texture2D" uid="uid://u52q6yb0srfv" path="res://sprites/Red_Dor.png" id="29_wgr81"]
+[ext_resource type="Texture2D" uid="uid://qyclxin2ehce" path="res://sprites/Chz.png" id="30_cc85h"]
+[ext_resource type="Texture2D" uid="uid://50bvns670p7k" path="res://sprites/Funyuns.png" id="30_u8kjm"]
+[ext_resource type="Texture2D" uid="uid://bk35tixoupnuk" path="res://sprites/Snyders.png" id="31_ylf5r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wkh2t"]
+size = Vector2(311, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_owjli"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8vqt0")
+}],
+"loop": true,
+"name": &"machineInner",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5jgri"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_0w800")
+}],
+"loop": true,
+"name": &"bag",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m3lm3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_pv3o6")
+}],
+"loop": true,
+"name": &"bag",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_msocb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_wkkrq")
+}],
+"loop": true,
+"name": &"bag",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x0nsu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_k4mua")
+}],
+"loop": true,
+"name": &"bag",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t8mj3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_nyeiv")
+}],
+"loop": true,
+"name": &"bar",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q6ct7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_4q0ds")
+}],
+"loop": true,
+"name": &"bar",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w5d0c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_igfox")
+}],
+"loop": true,
+"name": &"cookie",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jus5u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_qf0qk")
+}],
+"loop": true,
+"name": &"bag",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1pwr7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_gpehp")
+}],
+"loop": true,
+"name": &"can",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r6iog"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_8atas")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a4n1q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_58crv")
+}],
+"loop": true,
+"name": &"can",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wjgiu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_pidjb")
+}],
+"loop": true,
+"name": &"bag",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v3fp5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_7t20t")
+}],
+"loop": true,
+"name": &"cookie",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h8q3s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_5dr32")
+}],
+"loop": true,
+"name": &"bar",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aiubg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_22owa")
+}],
+"loop": true,
+"name": &"bag",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r1yj8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_m5apc")
+}],
+"loop": true,
+"name": &"bar",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wll2d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_4lsa4")
+}],
+"loop": true,
+"name": &"bag",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ylp2x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_q1dpi")
+}],
+"loop": true,
+"name": &"bar",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3w1so"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_abtfx")
+}],
+"loop": true,
+"name": &"bar",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qbqcx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_td1l7")
+}],
+"loop": true,
+"name": &"bag",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vi0g7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_dc3pm")
+}],
+"loop": true,
+"name": &"bag",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0me1v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_usprx")
+}],
+"loop": true,
+"name": &"bar",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3elgo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_bavq2")
+}],
+"loop": true,
+"name": &"bar",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ito0v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_uryqx")
+}],
+"loop": true,
+"name": &"bag",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3j30s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_30ytj")
+}],
+"loop": true,
+"name": &"bag",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dral1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_wgr81")
+}],
+"loop": true,
+"name": &"bag",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qerq3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_cc85h")
+}],
+"loop": true,
+"name": &"bag",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_suld5"]
+size = Vector2(43, 430)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kip7j"]
+size = Vector2(45, 431.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fxm56"]
+size = Vector2(310, 25)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q4usv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_u8kjm")
+}],
+"loop": true,
+"name": &"bag",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yhsif"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_ylf5r")
+}],
+"loop": true,
+"name": &"bag",
+"speed": 5.0
+}]
+
+[node name="VendingMachine" type="Area2D"]
+script = ExtResource("1_c3hid")
+
+[node name="bottom" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-10.5, 211)
+shape = SubResource("RectangleShape2D_wkh2t")
+
+[node name="machineInner" type="AnimatedSprite2D" parent="."]
+z_index = -1
+position = Vector2(0, 6.10352e-05)
+scale = Vector2(3.06332, 3.4186)
+sprite_frames = SubResource("SpriteFrames_owjli")
+animation = &"machineInner"
+metadata/_edit_group_ = true
+
+[node name="barbLays" type="AnimatedSprite2D" parent="."]
+position = Vector2(-95, -216)
+scale = Vector2(1.93753, 2.24219)
+sprite_frames = SubResource("SpriteFrames_5jgri")
+animation = &"bag"
+
+[node name="cheddPring" type="AnimatedSprite2D" parent="."]
+position = Vector2(-96, -74)
+scale = Vector2(2.75002, 3)
+sprite_frames = SubResource("SpriteFrames_m3lm3")
+animation = &"bag"
+
+[node name="cheddRuffs" type="AnimatedSprite2D" parent="."]
+position = Vector2(-55, -146)
+scale = Vector2(2.2813, 2.56251)
+sprite_frames = SubResource("SpriteFrames_msocb")
+animation = &"bag"
+
+[node name="classicLays" type="AnimatedSprite2D" parent="."]
+position = Vector2(-54.002, -216)
+scale = Vector2(1.9, 2.242)
+sprite_frames = SubResource("SpriteFrames_x0nsu")
+animation = &"bag"
+
+[node name="KitKat" type="AnimatedSprite2D" parent="."]
+position = Vector2(-103, -3.00006)
+scale = Vector2(2.06246, 2.60938)
+sprite_frames = SubResource("SpriteFrames_t8mj3")
+animation = &"bar"
+
+[node name="natureValley" type="AnimatedSprite2D" parent="."]
+position = Vector2(-72, 69)
+scale = Vector2(2.75, 2.5)
+sprite_frames = SubResource("SpriteFrames_q6ct7")
+animation = &"bar"
+
+[node name="oreo" type="AnimatedSprite2D" parent="."]
+position = Vector2(-11, 1.19209e-07)
+scale = Vector2(2.12509, 1.92188)
+sprite_frames = SubResource("SpriteFrames_w5d0c")
+animation = &"cookie"
+
+[node name="originRuffs" type="AnimatedSprite2D" parent="."]
+position = Vector2(-97.002, -146.728)
+scale = Vector2(2.26569, 2.534)
+sprite_frames = SubResource("SpriteFrames_jus5u")
+animation = &"bag"
+
+[node name="srcrPring" type="AnimatedSprite2D" parent="."]
+position = Vector2(-53, -74)
+scale = Vector2(2.75, 3)
+sprite_frames = SubResource("SpriteFrames_1pwr7")
+animation = &"can"
+
+[node name="saltvinLays" type="AnimatedSprite2D" parent="."]
+position = Vector2(-12, -216)
+scale = Vector2(1.9, 2.242)
+sprite_frames = SubResource("SpriteFrames_r6iog")
+
+[node name="saltvinPrings" type="AnimatedSprite2D" parent="."]
+position = Vector2(-10, -74)
+scale = Vector2(2.75, 3)
+sprite_frames = SubResource("SpriteFrames_a4n1q")
+animation = &"can"
+
+[node name="srcrRuffs" type="AnimatedSprite2D" parent="."]
+position = Vector2(-10, -147)
+scale = Vector2(2.281, 2.563)
+sprite_frames = SubResource("SpriteFrames_wjgiu")
+animation = &"bag"
+
+[node name="blondeOreos" type="AnimatedSprite2D" parent="."]
+position = Vector2(-41, 0)
+scale = Vector2(2.25, 1.922)
+sprite_frames = SubResource("SpriteFrames_v3fp5")
+animation = &"cookie"
+
+[node name="matKitKat" type="AnimatedSprite2D" parent="."]
+position = Vector2(-72, -3)
+scale = Vector2(2.062, 2.609)
+sprite_frames = SubResource("SpriteFrames_h8q3s")
+animation = &"bar"
+
+[node name="pMnM" type="AnimatedSprite2D" parent="."]
+position = Vector2(-41, 68)
+scale = Vector2(2.062, 2.609)
+sprite_frames = SubResource("SpriteFrames_aiubg")
+animation = &"bag"
+
+[node name="orangeNatureValley" type="AnimatedSprite2D" parent="."]
+position = Vector2(-102, 69)
+scale = Vector2(2.75, 2.5)
+sprite_frames = SubResource("SpriteFrames_r1yj8")
+animation = &"bar"
+
+[node name="purpMnM" type="AnimatedSprite2D" parent="."]
+position = Vector2(-13, 68)
+scale = Vector2(2.062, 2.5)
+sprite_frames = SubResource("SpriteFrames_wll2d")
+animation = &"bag"
+
+[node name="reeses" type="AnimatedSprite2D" parent="."]
+position = Vector2(19, 69)
+scale = Vector2(2.75, 2.5)
+sprite_frames = SubResource("SpriteFrames_ylp2x")
+animation = &"bar"
+
+[node name="snickers" type="AnimatedSprite2D" parent="."]
+position = Vector2(23, -2)
+scale = Vector2(2.2, 2.609)
+sprite_frames = SubResource("SpriteFrames_3w1so")
+animation = &"bar"
+
+[node name="sourSkittles" type="AnimatedSprite2D" parent="."]
+position = Vector2(51, 70)
+scale = Vector2(2.75, 2.5)
+sprite_frames = SubResource("SpriteFrames_qbqcx")
+animation = &"bag"
+
+[node name="skittles" type="AnimatedSprite2D" parent="."]
+position = Vector2(82, 70)
+scale = Vector2(2.75, 2.5)
+sprite_frames = SubResource("SpriteFrames_vi0g7")
+animation = &"bag"
+
+[node name="almdjoy" type="AnimatedSprite2D" parent="."]
+position = Vector2(82, -3)
+scale = Vector2(2.2, 2.609)
+sprite_frames = SubResource("SpriteFrames_0me1v")
+animation = &"bar"
+
+[node name="3muskets" type="AnimatedSprite2D" parent="."]
+position = Vector2(50, 0)
+scale = Vector2(2.2, 2.609)
+sprite_frames = SubResource("SpriteFrames_3elgo")
+animation = &"bar"
+
+[node name="redDoritos" type="AnimatedSprite2D" parent="."]
+position = Vector2(31, -215)
+scale = Vector2(1.9, 2.242)
+sprite_frames = SubResource("SpriteFrames_ito0v")
+animation = &"bag"
+
+[node name="purpDoritos" type="AnimatedSprite2D" parent="."]
+position = Vector2(74, -216)
+scale = Vector2(1.9, 2.242)
+sprite_frames = SubResource("SpriteFrames_3j30s")
+animation = &"bag"
+
+[node name="blueDoritos" type="AnimatedSprite2D" parent="."]
+position = Vector2(74, -145)
+scale = Vector2(1.9, 2.242)
+sprite_frames = SubResource("SpriteFrames_dral1")
+animation = &"bag"
+
+[node name="cheezit" type="AnimatedSprite2D" parent="."]
+position = Vector2(32, -73)
+scale = Vector2(2.281, 2.563)
+sprite_frames = SubResource("SpriteFrames_qerq3")
+animation = &"bag"
+
+[node name="side1" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(123.5, -19)
+shape = SubResource("RectangleShape2D_suld5")
+
+[node name="side2" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-145, -19.75)
+shape = SubResource("RectangleShape2D_kip7j")
+
+[node name="top" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-11, -254)
+shape = SubResource("RectangleShape2D_fxm56")
+
+[node name="funnions" type="AnimatedSprite2D" parent="."]
+position = Vector2(74, -74)
+scale = Vector2(2.281, 2.583)
+sprite_frames = SubResource("SpriteFrames_q4usv")
+animation = &"bag"
+
+[node name="pretzels" type="AnimatedSprite2D" parent="."]
+position = Vector2(33, -146)
+scale = Vector2(2.281, 2.583)
+sprite_frames = SubResource("SpriteFrames_yhsif")
+animation = &"bag"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkyaorgu2yc7v"
-path="res://.godot/imported/Foreground.png-3402cdc4ea5e9bba7cf9971022944a26.ctex"
+uid="uid://d2l6nl60n7vqm"
+path="res://.godot/imported/SaltnVin_Pringles.png-1337f7e19680cbec7e5062bcb63cc0ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Foreground.png"
-dest_files=["res://.godot/imported/Foreground.png-3402cdc4ea5e9bba7cf9971022944a26.ctex"]
+source_file="res://sprites/SaltnVin_Pringles.png"
+dest_files=["res://.godot/imported/SaltnVin_Pringles.png-1337f7e19680cbec7e5062bcb63cc0ea.ctex"]
 
 [params]
 

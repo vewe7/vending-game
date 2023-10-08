@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://cal84okvyfmdu"]
+[gd_scene load_steps=8 format=3 uid="uid://cal84okvyfmdu"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_m0krb"]
 [ext_resource type="PackedScene" uid="uid://dat41afu2rf2f" path="res://snack.tscn" id="2_kblac"]
+[ext_resource type="PackedScene" uid="uid://dpgys7jsnhcgs" path="res://hud.tscn" id="3_c8va4"]
 [ext_resource type="PackedScene" uid="uid://cmj0vwv4ay05j" path="res://snackstuck.tscn" id="3_no2ja"]
+[ext_resource type="PackedScene" uid="uid://lhfeivoxr77s" path="res://vending_machine.tscn" id="4_7o7kt"]
+[ext_resource type="Script" path="res://VendButton.gd" id="4_daypl"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4x0fc"]
 bounce = 2.0
@@ -12,15 +15,36 @@ absorbent = true
 script = ExtResource("1_m0krb")
 snack_scene = ExtResource("2_kblac")
 
+[node name="HUD" parent="." instance=ExtResource("3_c8va4")]
+
+[node name="VendButton" parent="HUD" index="2"]
+anchors_preset = 0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 39.0
+offset_bottom = 27.0
+script = ExtResource("4_daypl")
+
 [node name="Snack2" parent="." node_paths=PackedStringArray("stuck_snack_scene") instance=ExtResource("2_kblac")]
-position = Vector2(552, 251)
+position = Vector2(872, 126)
 physics_material_override = SubResource("PhysicsMaterial_4x0fc")
 stuck_snack_scene = NodePath("../SnackStuck")
 
 [node name="Snack3" parent="." node_paths=PackedStringArray("stuck_snack_scene") instance=ExtResource("2_kblac")]
-position = Vector2(559, -200)
+position = Vector2(696, 37)
 physics_material_override = SubResource("PhysicsMaterial_4x0fc")
 stuck_snack_scene = NodePath("../SnackStuck")
 
 [node name="SnackStuck" parent="." instance=ExtResource("3_no2ja")]
-position = Vector2(565, 495)
+position = Vector2(840, 1002)
+rotation = 1.33343
+
+[node name="VendingMachine" parent="." instance=ExtResource("4_7o7kt")]
+position = Vector2(811, 712)
+scale = Vector2(2, 2)
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="HUD/VendButton" to="." method="_on_vend_button_pressed"]
+
+[editable path="HUD"]

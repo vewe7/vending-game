@@ -201,7 +201,7 @@ sprite_filename = "Pringles.png"
 [node name="SpawnerC3" parent="." instance=ExtResource("7_gdu2t")]
 position = Vector2(1131, 636)
 collision_shape_filename = "chip_standard.tres"
-sprite_filename = "SaltVin_Pringles.png"
+sprite_filename = "SaltnVin_Pringles.png"
 
 [node name="SpawnerC4" parent="." instance=ExtResource("7_gdu2t")]
 position = Vector2(1213, 636)

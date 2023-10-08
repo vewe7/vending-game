@@ -18,7 +18,7 @@ func _process(delta):
 		falling_velocity = self.linear_velocity
 
 func _on_body_entered(body):
-	if (!has_hit && body.scene_file_path == "res://snackstuck.tscn"):
+	if (!has_hit && body is RigidBody2D):
 		has_hit = true
 		stuck_snack_scene.take_hit(falling_velocity, self.mass)
 		

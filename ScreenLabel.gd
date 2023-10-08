@@ -31,8 +31,9 @@ func _on_vend_button_pressed(input_val):
 			self.text = ""
 	elif (input_val == "Clear"):
 		self.text = ""
-	elif (input_val.is_valid_int() && self.text.length() == 1):
-		self.text += input_val
+	elif (input_val.is_valid_int()):
+		if (self.text.length() == 1):
+			self.text += input_val
 	elif self.text.length() == 0:
 		self.text += input_val
 

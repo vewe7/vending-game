@@ -900,3 +900,157 @@ hframes = 13
 libraries = {
 "": SubResource("AnimationLibrary_w61bj")
 }
+
+[node name="coilD1" type="Sprite2D" parent="."]
+position = Vector2(-104, 8)
+scale = Vector2(3.66667, 3.66667)
+texture = ExtResource("33_y0s5h")
+hframes = 13
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="coilD1"]
+libraries = {
+"": SubResource("AnimationLibrary_w61bj")
+}
+
+[node name="coilD2" type="Sprite2D" parent="."]
+position = Vector2(-73, 8)
+scale = Vector2(3.66667, 3.66667)
+texture = ExtResource("33_y0s5h")
+hframes = 13
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="coilD2"]
+libraries = {
+"": SubResource("AnimationLibrary_w61bj")
+}
+
+[node name="coilD3" type="Sprite2D" parent="."]
+position = Vector2(-42, 8)
+scale = Vector2(3.66667, 3.66667)
+texture = ExtResource("33_y0s5h")
+hframes = 13
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="coilD3"]
+libraries = {
+"": SubResource("AnimationLibrary_w61bj")
+}
+
+[node name="coilD4" type="Sprite2D" parent="."]
+position = Vector2(-12, 8)
+scale = Vector2(3.66667, 3.66667)
+texture = ExtResource("33_y0s5h")
+hframes = 13
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="coilD4"]
+libraries = {
+"": SubResource("AnimationLibrary_w61bj")
+}
+
+[node name="coilD5" type="Sprite2D" parent="."]
+position = Vector2(21, 8)
+scale = Vector2(3.66667, 3.66667)
+texture = ExtResource("33_y0s5h")
+hframes = 13
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="coilD5"]
+libraries = {
+"": SubResource("AnimationLibrary_w61bj")
+}
+
+[node name="coilD6" type="Sprite2D" parent="."]
+position = Vector2(48, 5)
+scale = Vector2(3.66667, 3.66667)
+texture = ExtResource("33_y0s5h")
+hframes = 13
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="coilD6"]
+libraries = {
+"": SubResource("AnimationLibrary_w61bj")
+}
+
+[node name="coilD7" type="Sprite2D" parent="."]
+position = Vector2(79, 8)
+scale = Vector2(3.66667, 3.66667)
+texture = ExtResource("33_y0s5h")
+hframes = 13
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="coilD7"]
+libraries = {
+"": SubResource("AnimationLibrary_w61bj")
+}
+
+[node name="coilE1" type="Sprite2D" parent="."]
+position = Vector2(-103, 79)
+scale = Vector2(3.66667, 3.66667)
+texture = ExtResource("33_y0s5h")
+hframes = 13
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="coilE1"]
+libraries = {
+"": SubResource("AnimationLibrary_w61bj")
+}
+
+[node name="coilE2" type="Sprite2D" parent="."]
+position = Vector2(-73, 80)
+scale = Vector2(3.66667, 3.66667)
+texture = ExtResource("33_y0s5h")
+hframes = 13
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="coilE2"]
+libraries = {
+"": SubResource("AnimationLibrary_w61bj")
+}
+
+[node name="coilE3" type="Sprite2D" parent="."]
+position = Vector2(-41, 80)
+scale = Vector2(3.66667, 3.66667)
+texture = ExtResource("33_y0s5h")
+hframes = 13
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="coilE3"]
+libraries = {
+"": SubResource("AnimationLibrary_w61bj")
+}
+
+[node name="coilE4" type="Sprite2D" parent="."]
+position = Vector2(-14, 80)
+scale = Vector2(3.66667, 3.66667)
+texture = ExtResource("33_y0s5h")
+hframes = 13
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="coilE4"]
+libraries = {
+"": SubResource("AnimationLibrary_w61bj")
+}
+
+[node name="coilE5" type="Sprite2D" parent="."]
+position = Vector2(19, 80)
+scale = Vector2(3.66667, 3.66667)
+texture = ExtResource("33_y0s5h")
+hframes = 13
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="coilE5"]
+libraries = {
+"": SubResource("AnimationLibrary_w61bj")
+}
+
+[node name="coilE6" type="Sprite2D" parent="."]
+position = Vector2(50, 80)
+scale = Vector2(3.66667, 3.66667)
+texture = ExtResource("33_y0s5h")
+hframes = 13
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="coilE6"]
+libraries = {
+"": SubResource("AnimationLibrary_w61bj")
+}
+
+[node name="coilE7" type="Sprite2D" parent="."]
+position = Vector2(81, 80)
+scale = Vector2(3.66667, 3.66667)
+texture = ExtResource("33_y0s5h")
+hframes = 13
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="coilE7"]
+libraries = {
+"": SubResource("AnimationLibrary_w61bj")
+}

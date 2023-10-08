@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 @export var stuckness = 100 # When this reaches 0, the snack should fall
-@export var UNSTUCK_CONST = 0.05
+@export var UNSTUCK_CONST = 0.07
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	print("meow ready")

@@ -24,5 +24,3 @@ texture = ExtResource("1_pqp8v")
 position = Vector2(0, -0.500015)
 scale = Vector2(4, 4)
 shape = SubResource("RectangleShape2D_n2kuc")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]

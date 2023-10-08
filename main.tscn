@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dpgys7jsnhcgs" path="res://hud.tscn" id="3_c8va4"]
 [ext_resource type="PackedScene" uid="uid://cmj0vwv4ay05j" path="res://snackstuck.tscn" id="3_no2ja"]
 [ext_resource type="PackedScene" uid="uid://lhfeivoxr77s" path="res://vending_machine.tscn" id="4_7o7kt"]
-[ext_resource type="Texture2D" uid="uid://byou20hvuq4ah" path="res://sprites/Background1.png" id="6_cdkfo"]
+[ext_resource type="Texture2D" uid="uid://b7vlrisg5f0ar" path="res://sprites/Background1.png" id="6_cdkfo"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4x0fc"]
 bounce = 2.0
@@ -28,6 +28,12 @@ snack_scene = ExtResource("2_kblac")
 
 [node name="HUD" parent="." instance=ExtResource("3_c8va4")]
 
+[node name="BalanceLabel" parent="HUD" index="0"]
+offset_left = 2150.0
+offset_top = 196.0
+offset_right = 2261.0
+offset_bottom = 287.0
+
 [node name="VendButton2" parent="HUD" index="8"]
 offset_left = 1271.0
 offset_top = 496.0
@@ -35,23 +41,24 @@ offset_right = 1440.0
 offset_bottom = 555.0
 
 [node name="Snack2" parent="." node_paths=PackedStringArray("stuck_snack_scene") instance=ExtResource("2_kblac")]
-position = Vector2(860, 442)
+position = Vector2(1202, 726)
 physics_material_override = SubResource("PhysicsMaterial_4x0fc")
 stuck_snack_scene = NodePath("../SnackStuck")
 
 [node name="Snack3" parent="." node_paths=PackedStringArray("stuck_snack_scene") instance=ExtResource("2_kblac")]
-position = Vector2(634, 299)
+position = Vector2(1214, 367)
 physics_material_override = SubResource("PhysicsMaterial_4x0fc")
 stuck_snack_scene = NodePath("../SnackStuck")
 
 [node name="SnackStuck" parent="." instance=ExtResource("3_no2ja")]
-position = Vector2(672, 1010)
+position = Vector2(1210, 1042)
 rotation = 1.33343
 
 [node name="VendingMachine" parent="." instance=ExtResource("4_7o7kt")]
 position = Vector2(1148, 785)
 scale = Vector2(2, 2)
 metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="Background" type="AnimatedSprite2D" parent="."]
 z_index = -4
@@ -59,5 +66,6 @@ position = Vector2(1147, 773)
 scale = Vector2(6.10933, 6.85111)
 sprite_frames = SubResource("SpriteFrames_pqdvi")
 animation = &"background"
+metadata/_edit_lock_ = true
 
 [editable path="HUD"]

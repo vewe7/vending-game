@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dat41afu2rf2f"]
 
-[ext_resource type="Texture2D" uid="uid://bxy5kxsealnh8" path="res://sprites/Classic_lays.png" id="1_awius"]
 [ext_resource type="Script" path="res://snack.gd" id="1_syoud"]
-[ext_resource type="Shape2D" uid="uid://b547crlv3lb3s" path="res://collision_shapes/chip_standard.tres" id="3_d0jee"]
+[ext_resource type="Texture2D" uid="uid://lbe0psnsexwe" path="res://sprites/Orange_NatureValley.png" id="2_ikcrq"]
+[ext_resource type="Shape2D" uid="uid://dgh1lbutmtqcq" path="res://collision_shapes/bar_shape.tres" id="3_p6ja7"]
 
 [node name="Snack" type="RigidBody2D"]
 continuous_cd = 1
@@ -13,11 +13,12 @@ script = ExtResource("1_syoud")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(4, 4)
-texture = ExtResource("1_awius")
+texture = ExtResource("2_ikcrq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.499999)
 scale = Vector2(4, 4)
-shape = ExtResource("3_d0jee")
+shape = ExtResource("3_p6ja7")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="hit" from="." to="." method="take_hit"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cal84okvyfmdu"]
+[gd_scene load_steps=9 format=3 uid="uid://cal84okvyfmdu"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_m0krb"]
 [ext_resource type="PackedScene" uid="uid://dat41afu2rf2f" path="res://snack.tscn" id="2_kblac"]
@@ -6,11 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cmj0vwv4ay05j" path="res://snackstuck.tscn" id="3_no2ja"]
 [ext_resource type="PackedScene" uid="uid://lhfeivoxr77s" path="res://vending_machine.tscn" id="4_7o7kt"]
 [ext_resource type="Texture2D" uid="uid://b7vlrisg5f0ar" path="res://sprites/Background1.png" id="6_cdkfo"]
-[ext_resource type="PackedScene" uid="uid://cmpd24rubmes5" path="res://spawner.tscn" id="7_gdu2t"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4x0fc"]
-bounce = 2.0
-absorbent = true
+[ext_resource type="PackedScene" path="res://spawner.tscn" id="7_gdu2t"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_pqdvi"]
 animations = [{
@@ -130,16 +126,6 @@ offset_top = 984.0
 offset_right = 1755.0
 offset_bottom = 1042.0
 
-[node name="Snack2" parent="." node_paths=PackedStringArray("stuck_snack_scene") instance=ExtResource("2_kblac")]
-position = Vector2(1202, 726)
-physics_material_override = SubResource("PhysicsMaterial_4x0fc")
-stuck_snack_scene = NodePath("../SnackStuck")
-
-[node name="Snack3" parent="." node_paths=PackedStringArray("stuck_snack_scene") instance=ExtResource("2_kblac")]
-position = Vector2(1214, 367)
-physics_material_override = SubResource("PhysicsMaterial_4x0fc")
-stuck_snack_scene = NodePath("../SnackStuck")
-
 [node name="SnackStuck" parent="." instance=ExtResource("3_no2ja")]
 position = Vector2(1210, 1042)
 rotation = 1.33343
@@ -152,10 +138,150 @@ sprite_frames = SubResource("SpriteFrames_pqdvi")
 animation = &"background"
 metadata/_edit_lock_ = true
 
-[node name="Spawner" parent="." instance=ExtResource("7_gdu2t")]
+[node name="SpawnerA3" parent="." instance=ExtResource("7_gdu2t")]
 position = Vector2(1124, 348)
 collision_shape_filename = "chip_standard.tres"
 sprite_filename = "SaltnVin_Lays.png"
+
+[node name="SpawnerA2" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(1040, 356)
+collision_shape_filename = "chip_standard.tres"
+sprite_filename = "Classic_lays.png"
+
+[node name="SpawnerA1" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(961, 354)
+collision_shape_filename = "chip_standard.tres"
+sprite_filename = "Classic_lays.png"
+
+[node name="SpawnerA4" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(1211, 350)
+collision_shape_filename = "chip_standard.tres"
+sprite_filename = "Blue_Dor.png"
+
+[node name="SpawnerA5" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(1297, 351)
+collision_shape_filename = "chip_standard.tres"
+sprite_filename = "Purple_Dor.png"
+
+[node name="SpawnerB1" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(957, 489)
+collision_shape_filename = "chip_standard.tres"
+sprite_filename = "Original_Ruffs.png"
+
+[node name="SpawnerB2" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(1038, 490)
+collision_shape_filename = "chip_standard.tres"
+sprite_filename = "Chedd_Ruffs.png"
+
+[node name="SpawnerB3" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(1125, 490)
+collision_shape_filename = "chip_standard.tres"
+sprite_filename = "SourCream_Ruffs.png"
+
+[node name="SpawnerB4" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(1214, 492)
+collision_shape_filename = "chip_standard.tres"
+sprite_filename = "Snyders.png"
+
+[node name="SpawnerB5" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(1296, 497)
+collision_shape_filename = "chip_standard.tres"
+sprite_filename = "Red_Dor.png"
+
+[node name="SpawnerC1" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(958, 637)
+collision_shape_filename = "chip_standard.tres"
+sprite_filename = "Chedd_Pringles.png"
+
+[node name="SpawnerC2" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(1042, 639)
+collision_shape_filename = "chip_standard.tres"
+sprite_filename = "Pringles.png"
+
+[node name="SpawnerC3" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(1131, 636)
+collision_shape_filename = "chip_standard.tres"
+sprite_filename = "SaltVin_Pringles.png"
+
+[node name="SpawnerC4" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(1213, 636)
+collision_shape_filename = "chip_standard.tres"
+sprite_filename = "Chz.png"
+
+[node name="SpawnerC5" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(1295, 636)
+collision_shape_filename = "chip_standard.tres"
+sprite_filename = "Funyuns.png"
+
+[node name="SpawnerD1" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(942, 779)
+collision_shape_filename = "bar_shape.tres"
+sprite_filename = "KitKat.png"
+
+[node name="SpawnerD2" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(1004, 779)
+collision_shape_filename = "bar_shape.tres"
+sprite_filename = "Matcha_KitKat.png"
+
+[node name="SpawnerD3" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(1066, 784)
+collision_shape_filename = "bar_shape.tres"
+sprite_filename = "Blonde_Oreo.png"
+
+[node name="SpawnerD4" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(1125, 784)
+collision_shape_filename = "bar_shape.tres"
+sprite_filename = "Oreo.png"
+
+[node name="SpawnerD5" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(1192, 780)
+collision_shape_filename = "bar_shape.tres"
+sprite_filename = "Snickers.png"
+
+[node name="SpawnerD6" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(1247, 781)
+collision_shape_filename = "bar_shape.tres"
+sprite_filename = "3Musk.png"
+
+[node name="SpawnerD7" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(1309, 778)
+collision_shape_filename = "bar_shape.tres"
+sprite_filename = "AlmondJoy.png"
+
+[node name="SpawnerE1" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(944, 920)
+collision_shape_filename = "bar_shape.tres"
+sprite_filename = "Orange_NatureValley.png"
+
+[node name="SpawnerE2" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(1004, 922)
+collision_shape_filename = "bar_shape.tres"
+sprite_filename = "NatureValley.png"
+
+[node name="SpawnerE3" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(1067, 921)
+collision_shape_filename = "bar_shape.tres"
+sprite_filename = "MnM.png"
+
+[node name="SpawnerE4" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(1123, 919)
+collision_shape_filename = "bar_shape.tres"
+sprite_filename = "Purple_MnM.png"
+
+[node name="SpawnerE5" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(1186, 923)
+collision_shape_filename = "bar_shape.tres"
+sprite_filename = "Reeses.png"
+
+[node name="SpawnerE6" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(1251, 924)
+collision_shape_filename = "bar_shape.tres"
+sprite_filename = "Sour_Skittles.png"
+
+[node name="SpawnerE7" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(1312, 922)
+collision_shape_filename = "bar_shape.tres"
+sprite_filename = "Skittles.png"
 
 [node name="VendingMachine" parent="." instance=ExtResource("4_7o7kt")]
 position = Vector2(1148, 785)

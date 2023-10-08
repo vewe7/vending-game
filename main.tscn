@@ -18,12 +18,18 @@ snack_scene = ExtResource("2_kblac")
 [node name="HUD" parent="." instance=ExtResource("3_c8va4")]
 
 [node name="VendButton" parent="HUD" index="2"]
-anchors_preset = 0
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 39.0
-offset_bottom = 27.0
+anchors_preset = -1
+offset_left = 1258.0
+offset_top = 398.0
+offset_right = 1445.0
+offset_bottom = 441.0
 script = ExtResource("4_daypl")
+
+[node name="VendButton2" parent="HUD" index="3"]
+offset_left = 1271.0
+offset_top = 496.0
+offset_right = 1440.0
+offset_bottom = 555.0
 
 [node name="Snack2" parent="." node_paths=PackedStringArray("stuck_snack_scene") instance=ExtResource("2_kblac")]
 position = Vector2(872, 126)
@@ -44,7 +50,5 @@ position = Vector2(811, 712)
 scale = Vector2(2, 2)
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
-
-[connection signal="pressed" from="HUD/VendButton" to="." method="_on_vend_button_pressed"]
 
 [editable path="HUD"]

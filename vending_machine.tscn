@@ -1,7 +1,6 @@
-[gd_scene load_steps=58 format=3 uid="uid://lhfeivoxr77s"]
+[gd_scene load_steps=62 format=3 uid="uid://lhfeivoxr77s"]
 
 [ext_resource type="Script" path="res://vendMac.gd" id="1_c3hid"]
-[ext_resource type="Texture2D" uid="uid://c7aux7ilglbjc" path="res://sprites/Foreground.png" id="2_6cfla"]
 [ext_resource type="Texture2D" uid="uid://b6em84o2wq7h6" path="res://sprites/Background.png" id="3_8vqt0"]
 [ext_resource type="Texture2D" uid="uid://b5q2say23wvsh" path="res://sprites/Barb_Lays.png" id="4_0w800"]
 [ext_resource type="Texture2D" uid="uid://biiox1xpng5mi" path="res://sprites/Chedd_Pringles.png" id="5_pv3o6"]
@@ -29,17 +28,10 @@
 [ext_resource type="Texture2D" uid="uid://boe275vr5u0ad" path="res://sprites/Blue_Dor.png" id="27_uryqx"]
 [ext_resource type="Texture2D" uid="uid://iqcixmdvg8ia" path="res://sprites/Purple_Dor.png" id="28_30ytj"]
 [ext_resource type="Texture2D" uid="uid://u52q6yb0srfv" path="res://sprites/Red_Dor.png" id="29_wgr81"]
+[ext_resource type="Texture2D" uid="uid://qyclxin2ehce" path="res://sprites/Chz.png" id="30_cc85h"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_pcmt2"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_6cfla")
-}],
-"loop": true,
-"name": &"machine",
-"speed": 5.0
-}]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wkh2t"]
+size = Vector2(311, 28)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_owjli"]
 animations = [{
@@ -338,16 +330,33 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_qerq3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_cc85h")
+}],
+"loop": true,
+"name": &"bag",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_suld5"]
+size = Vector2(43, 430)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kip7j"]
+size = Vector2(45, 431.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fxm56"]
+size = Vector2(310, 25)
+
 [node name="VendingMachine" type="Area2D"]
 script = ExtResource("1_c3hid")
 
-[node name="machineOuter" type="AnimatedSprite2D" parent="."]
-z_index = 45
-scale = Vector2(3.05, 3.41118)
-sprite_frames = SubResource("SpriteFrames_pcmt2")
-animation = &"machine"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="bottom" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-10.5, 211)
+shape = SubResource("RectangleShape2D_wkh2t")
 
 [node name="machineInner" type="AnimatedSprite2D" parent="."]
 z_index = -1
@@ -511,3 +520,24 @@ position = Vector2(74, -145)
 scale = Vector2(1.9, 2.242)
 sprite_frames = SubResource("SpriteFrames_dral1")
 animation = &"bag"
+
+[node name="cheezit" type="AnimatedSprite2D" parent="."]
+position = Vector2(32, -73)
+scale = Vector2(2.281, 2.563)
+sprite_frames = SubResource("SpriteFrames_qerq3")
+animation = &"bag"
+
+[node name="side1" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(123.5, -19)
+shape = SubResource("RectangleShape2D_suld5")
+
+[node name="side2" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-145, -19.75)
+shape = SubResource("RectangleShape2D_kip7j")
+
+[node name="top" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-11, -254)
+shape = SubResource("RectangleShape2D_fxm56")

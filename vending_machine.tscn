@@ -737,6 +737,7 @@ metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
 [node name="coilA1" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(-96, -207)
 scale = Vector2(3.66667, 3.66667)
 texture = ExtResource("33_y0s5h")
@@ -748,6 +749,7 @@ libraries = {
 }
 
 [node name="coilA2" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(-56, -206)
 scale = Vector2(3.66667, 3.66667)
 texture = ExtResource("33_y0s5h")
@@ -759,6 +761,7 @@ libraries = {
 }
 
 [node name="coilA3" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(-12, -206)
 scale = Vector2(3.66667, 3.66667)
 texture = ExtResource("33_y0s5h")
@@ -770,6 +773,7 @@ libraries = {
 }
 
 [node name="coilA4" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(30, -206)
 scale = Vector2(3.66667, 3.66667)
 texture = ExtResource("33_y0s5h")
@@ -781,6 +785,7 @@ libraries = {
 }
 
 [node name="coilA5" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(75, -206)
 scale = Vector2(3.66667, 3.66667)
 texture = ExtResource("33_y0s5h")
@@ -792,6 +797,7 @@ libraries = {
 }
 
 [node name="coilB1" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(-98, -135)
 scale = Vector2(3.66667, 3.66667)
 texture = ExtResource("33_y0s5h")
@@ -803,6 +809,7 @@ libraries = {
 }
 
 [node name="coilB2" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(-55, -135)
 scale = Vector2(3.66667, 3.66667)
 texture = ExtResource("33_y0s5h")
@@ -814,6 +821,7 @@ libraries = {
 }
 
 [node name="coilB3" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(-11, -135)
 scale = Vector2(3.66667, 3.66667)
 texture = ExtResource("33_y0s5h")

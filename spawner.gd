@@ -11,11 +11,12 @@ func _ready():
 func _process(delta):
 	pass
 
-func _spawn_item():
+func _spawn_item(m):
 	var new_snack = snack_scene.instantiate()
 	new_snack.get_child(0).texture = load("res://sprites/" + sprite_filename)
 	new_snack.get_child(1).shape = load("res://collision_shapes/" + collision_shape_filename)
 	new_snack.stuck_snack_scene = get_parent().get_node("SnackStuck")
 	new_snack.position = self.position;
+	new_snack.mass = m
 	self.add_sibling(new_snack)
 	

@@ -2,9 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bxy5kxsealnh8" path="res://sprites/Classic_lays.png" id="1_awius"]
 [ext_resource type="Script" path="res://snack.gd" id="1_syoud"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n2kuc"]
-size = Vector2(13.8333, 16)
+[ext_resource type="Shape2D" uid="uid://b547crlv3lb3s" path="res://collision_shapes/chip_standard.tres" id="3_d0jee"]
 
 [node name="Snack" type="RigidBody2D"]
 continuous_cd = 1
@@ -18,9 +16,8 @@ scale = Vector2(4, 4)
 texture = ExtResource("1_awius")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 1.00002)
 scale = Vector2(4, 4)
-shape = SubResource("RectangleShape2D_n2kuc")
+shape = ExtResource("3_d0jee")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="hit" from="." to="." method="take_hit"]

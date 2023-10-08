@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cal84okvyfmdu"]
+[gd_scene load_steps=10 format=3 uid="uid://cal84okvyfmdu"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_m0krb"]
 [ext_resource type="PackedScene" uid="uid://dat41afu2rf2f" path="res://snack.tscn" id="2_kblac"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cmj0vwv4ay05j" path="res://snackstuck.tscn" id="3_no2ja"]
 [ext_resource type="PackedScene" uid="uid://lhfeivoxr77s" path="res://vending_machine.tscn" id="4_7o7kt"]
 [ext_resource type="Texture2D" uid="uid://b7vlrisg5f0ar" path="res://sprites/Background1.png" id="6_cdkfo"]
+[ext_resource type="PackedScene" uid="uid://cmpd24rubmes5" path="res://spawner.tscn" id="7_gdu2t"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4x0fc"]
 bounce = 2.0
@@ -143,18 +144,23 @@ stuck_snack_scene = NodePath("../SnackStuck")
 position = Vector2(1210, 1042)
 rotation = 1.33343
 
-[node name="VendingMachine" parent="." instance=ExtResource("4_7o7kt")]
-position = Vector2(1148, 785)
-scale = Vector2(2, 2)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
 [node name="Background" type="AnimatedSprite2D" parent="."]
 z_index = -4
 position = Vector2(1147, 773)
 scale = Vector2(6.10933, 6.85111)
 sprite_frames = SubResource("SpriteFrames_pqdvi")
 animation = &"background"
+metadata/_edit_lock_ = true
+
+[node name="Spawner" parent="." instance=ExtResource("7_gdu2t")]
+position = Vector2(1124, 348)
+collision_shape_filename = "chip_standard.tres"
+sprite_filename = "SaltnVin_Lays.png"
+
+[node name="VendingMachine" parent="." instance=ExtResource("4_7o7kt")]
+position = Vector2(1148, 785)
+scale = Vector2(2, 2)
+metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
 [editable path="HUD"]

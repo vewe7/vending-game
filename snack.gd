@@ -18,7 +18,7 @@ func _process(delta):
 		falling_velocity = self.linear_velocity
 
 func _on_body_entered(body):
-	if (!has_hit && body is RigidBody2D && body.position.y < 1040):
+	if (!has_hit && body is RigidBody2D && body.position.y < 1060):
 		has_hit = true
 		stuck_snack_scene.take_hit(falling_velocity, self.mass)
 		
